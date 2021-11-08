@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-size-m: 16px;
+  --line-height-m: calc(var(--font-size-m) + 4);
+  
+  --font-size-m: 20px;
+  --line-height-m: calc(var(--font-size-m) + 4);
+
+  --font-size-xl: 26px;
+  --line-height-xl: calc(var(--font-size-xl) - 4);
+
+
+  --khand: 'Khand', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 400;
+  --font-weight-semi-bold: 500;
+  --font-weight-bold: 600;
+  --font-weight-ultra-bold: 700;
+
+  --spacing-xs: 2px;
+  --spacing-s: 4px;
+  --spacing-m: 8px;
+  --spacing-l: 10px;
+  --spacing-xl: 15px;
+
+  --pro-category-color: #15A83E;
+  --pro-category-bg-color: #ffffff;
+  --pro-player-bg: #ffffff;
+  --pro-player-color: #000000;
+  
+  --am-category-bg-color: #E1001B;
+  --am-category-color: #ffffff;
+  --am-player-bg: #4B4B4B;
+  --am-player-color: #ffffff;
+
+}

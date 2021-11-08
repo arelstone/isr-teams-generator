@@ -1,0 +1,47 @@
+@import url('../../styles/fonts.css');
+
+.player {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-family: var(--khand);
+    padding: var(--spacing-m);
+    margin: var(--spacing-m);
+    box-shadow: -5px 5px #000000;
+}
+
+.player.PRO {
+    background: var(--pro-player-bg);
+    color: var(--pro-player-color);
+}
+
+.player.AM {
+    background: var(--am-player-bg);
+    color: var(--am-player-color);
+}
+
+.player .player-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-s);
+}
+
+.player .player-name {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
+    font-weight: var(--font-weight-semi-bold);
+
+}
+
+.player .player-time {
+    text-transform: uppercase;
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
+    margin-left: var(--spacing-xl);
+    text-align: right;
+}
