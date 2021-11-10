@@ -1,7 +1,15 @@
+.team-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50vw
+}
 .team {
     display: flex;
     flex: 1;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }

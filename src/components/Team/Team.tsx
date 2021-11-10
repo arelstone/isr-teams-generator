@@ -1,17 +1,20 @@
-import { Driver, Player } from '../Player/Player'
+import { TeamPlayers } from '../../types'
+import { Player } from '../Player/Player'
 import './team.css'
 
 
-interface Props {
-    pro: Driver
-    am: Driver
+interface Props extends TeamPlayers {
+    num: number
 }
 
-export const Team = ({ am, pro }: Props) => {
+export const Team = ({ am, pro, num }: Props) => {
     return (
-        <div className="team">
-            <Player {...pro} />
-            <Player {...am} />
+        <div className="team-wrapper">
+            <h1>{num}</h1>
+            <div className="team">
+                <Player {...pro} />
+                <Player {...am} />
+            </div>
         </div>
     )
 }

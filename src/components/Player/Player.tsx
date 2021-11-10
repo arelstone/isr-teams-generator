@@ -1,12 +1,8 @@
-import { DriverCategory } from '../../types'
+import { Driver } from '../../types'
 import { Category } from '../Category/Category'
 import './player.css'
 
-export type Driver = {
-    category: DriverCategory
-    name: string
-    time: string
-}
+
 
 interface Props extends Driver { }
 

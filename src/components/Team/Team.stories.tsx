@@ -6,6 +6,7 @@ export default {
 }
 
 export const TeamMembers = () => <Team
+  num={1}
   am={{
     category: 'AM',
     name: 'ISR_EeekDK',
