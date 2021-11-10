@@ -1,13 +1,13 @@
 @import url('../../styles/fonts.css');
 
 .player {
-    width: 50%;
+    width: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     font-family: var(--khand);
-    padding: var(--spacing-m);
+    padding: var(--spacing-s);
     margin: var(--spacing-m);
     box-shadow: -5px 5px #000000;
 }
@@ -28,19 +28,19 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: var(--spacing-s);
+    margin-top: var(--spacing-xs);
 }
 
 .player .player-name {
-    font-size: var(--font-size-xl);
-    line-height: var(--line-height-xl);
+    font-size: var(--font-size-l);
+    line-height: var(--line-height-l);
     font-weight: var(--font-weight-semi-bold);
 
 }
 
 .player .player-time {
     text-transform: uppercase;
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-s);
     line-height: var(--line-height-m);
     margin-left: var(--spacing-xl);
     text-align: right;

@@ -1,4 +1,5 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useState } from 'react';
+// import Webcam from 'react-webcam'
 import './App.css';
 import { playedrivers } from './drivers'
 import { Driver, DriverCategory } from './types';
@@ -15,19 +16,15 @@ function App() {
     ...d,
     onTeam: false
   })))
-  const [team, setTeam] = useState<DriverWithTeam[][]>([])
+  const [teams, setTeams] = useState<DriverWithTeam[][]>([])
 
   const playersNotOnATeam = useCallback((category: DriverCategory) => players.filter(({ onTeam }) => !onTeam).filter(p => p.category === category), [players])
-  // const proPlayersNotOnATeam = useMemo(() => playersNotOnATeam.filter(({ category }) => category === 'PRO'), [playersNotOnATeam])
-  // const amPlayersNotOnATeam = useMemo(() => playersNotOnATeam.filter(({ category }) => category === 'PRO'), [playersNotOnATeam])
   const randomPlayer = useCallback((players: DriverWithTeam[]) => {
     const [first] = shuffle(players)
-    // if (!first) throw new Error('All players has been assigned to a team')
     return first
   }, [])
 
   const assignPlayerToTeam = useCallback((p: DriverWithTeam) => {
-    // console.log('assignPlayerToTeam: ', p);
     const x = players.filter(x => x.name !== p.name)
     const d = [...x, { ...p, onTeam: true }]
     console.log(d);
@@ -36,7 +33,7 @@ function App() {
   }, [players])
 
 
-  const findTeam = () => {
+  const findTeam = useCallback(() => {
     const pro = randomPlayer(playersNotOnATeam('PRO'))
     const am = randomPlayer(playersNotOnATeam('AM'))
     if (!pro || !am) { return }
@@ -44,14 +41,21 @@ function App() {
     assignPlayerToTeam(pro)
     assignPlayerToTeam(am)
 
-    setTeam([...team, [pro, am]])
-  }
+    setTeams([...teams, [pro, am]])
+  }, [assignPlayerToTeam, playersNotOnATeam, randomPlayer, teams])
+
+  const reset = useCallback(() => {
+    setTeams([])
+    setPlayers(playedrivers.map(d => ({ ...d, onTeam: false })))
+  }, [setTeams])
 
   return (
     <div className="App">
       <button onClick={() => findTeam()}>Find team</button>
-
-      {team.map(([pro, am], index) => <Team key={index} num={index + 1} am={am} pro={pro} />)}
+      <button onClick={() => reset()}>Reset</button>
+      <div id="teams">
+        {teams.map(([pro, am], index) => <Team key={index} num={index + 1} am={am} pro={pro} />)}
+      </div>
     </div >
   );
 }

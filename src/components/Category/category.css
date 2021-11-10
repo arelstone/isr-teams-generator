@@ -6,7 +6,7 @@
     justify-content: center;
     width: 25px;
     height: 20px;
-    margin-right: var(--spacing-l);
+    margin-right: var(--spacing-m);
     padding: 0 var(--spacing-xs);
     font-size: var(--font--size-m);
     line-height: var(--line-height-m);
