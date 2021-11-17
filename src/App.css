@@ -1,12 +1,12 @@
 @import url('./styles/fonts.css');
 
 body {
-    background: #BCC2BE;
+    background: #DBDBDB;
     padding: 10px;    
 }
 
 #teams {
-    margin-top: 100px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-content: center;

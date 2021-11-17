@@ -10,7 +10,9 @@ interface Props extends TeamPlayers {
 export const Team = ({ am, pro, num }: Props) => {
     return (
         <div className="team-wrapper">
-            <h1>{num}</h1>
+            <div>
+                <h1>{num < 10 ? ' ' + num : num}</h1>
+            </div>
             <div className="team">
                 <Player {...pro} />
                 <Player {...am} />

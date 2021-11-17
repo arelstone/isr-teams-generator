@@ -1,11 +1,12 @@
-import { useCallback, useState } from 'react';
-// import Webcam from 'react-webcam'
+import { useState } from 'react';
 import './App.css';
 import { playedrivers } from './drivers'
 import { Driver, DriverCategory } from './types';
 
-import shuffle from 'lodash.shuffle'
 import { Team } from './components/Team/Team';
+import { Counter } from './components/Counter/Counter';
+import { shuffle } from './utils/shuffle';
+
 
 type DriverWithTeam = Driver & {
   onTeam: boolean
@@ -18,42 +19,46 @@ function App() {
   })))
   const [teams, setTeams] = useState<DriverWithTeam[][]>([])
 
-  const playersNotOnATeam = useCallback((category: DriverCategory) => players.filter(({ onTeam }) => !onTeam).filter(p => p.category === category), [players])
-  const randomPlayer = useCallback((players: DriverWithTeam[]) => {
-    const [first] = shuffle(players)
+  const randomPlayer = (category: DriverCategory) => {
+    const [first] = shuffle(
+      players.filter(({ onTeam }) => !onTeam)
+        .filter(p => p.category === category)
+    )
+
     return first
-  }, [])
+  }
 
-  const assignPlayerToTeam = useCallback((p: DriverWithTeam) => {
-    const x = players.filter(x => x.name !== p.name)
-    const d = [...x, { ...p, onTeam: true }]
-    console.log(d);
+  const findTeam = () => {
+    const left = players.filter(({ onTeam }) => !onTeam)
 
-    setPlayers(d)
-  }, [players])
+    if (left.length === 0) { return }
+
+    const pro = randomPlayer('PRO') ?? { category: 'PRO', name: '', times: [], total: '' }
+    const am = randomPlayer('AM') ?? { category: 'AM', name: '', times: [], total: '' }
 
 
-  const findTeam = useCallback(() => {
-    const pro = randomPlayer(playersNotOnATeam('PRO'))
-    const am = randomPlayer(playersNotOnATeam('AM'))
-    if (!pro || !am) { return }
-
-    assignPlayerToTeam(pro)
-    assignPlayerToTeam(am)
+    setPlayers([
+      ...players.filter(({ name }) => name !== pro.name)
+        .filter(({ name }) => name !== am.name),
+      { ...pro, onTeam: true },
+      { ...am || {}, onTeam: true }
+    ])
 
     setTeams([...teams, [pro, am]])
-  }, [assignPlayerToTeam, playersNotOnATeam, randomPlayer, teams])
+  }
 
-  const reset = useCallback(() => {
+  const reset = () => {
     setTeams([])
     setPlayers(playedrivers.map(d => ({ ...d, onTeam: false })))
-  }, [setTeams])
+  }
 
   return (
     <div className="App">
       <button onClick={() => findTeam()}>Find team</button>
       <button onClick={() => reset()}>Reset</button>
+
       <div id="teams">
+        {/* <Counter count={players.filter(({ onTeam }) => !onTeam).length / 2} /> */}
         {teams.map(([pro, am], index) => <Team key={index} num={index + 1} am={am} pro={pro} />)}
       </div>
     </div >

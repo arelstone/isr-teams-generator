@@ -23,7 +23,6 @@
 }
 .category.AM {
     background: var(--am-category-bg-color);
-
     border-color: var(--am-category-color);
     color: var(--am-color);
 }

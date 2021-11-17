@@ -1,0 +1,18 @@
+@import url('../../styles/fonts.css');
+
+.counter-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 600px;
+    margin-left: 10px;
+}
+
+.counter-wrapper h1 {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
+    font-family: var(--khand);
+    font-weight: var(--font-weight-bold);
+}

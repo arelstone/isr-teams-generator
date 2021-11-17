@@ -1,3 +1,24 @@
+#!/usr/bin/env node
+
+function format (u, v) {
+    switch(u) {
+        case 'ms': 
+            if (v < 10) { return `00${v}` }
+            if (v < 100) { return `0${v}`}
+            
+            return v
+        case 's': 
+            if (v < 10) { return `0${v}` }
+        
+            return v
+        case 'm':
+            default:
+                if (v < 10) { return `0${v}` }
+                
+                return v
+    }
+}
+
 const times = [
     {
         player: 'dyreborg24',
@@ -13,7 +34,7 @@ const times = [
     },
     {
         player: 'ISR_EeekDK',
-        times:['01:39:435','02:24:651',]
+        times:['01:38:892','02:24:651',]
     },
     {
         player: 'Zaligrace',
@@ -43,6 +64,10 @@ const times = [
         player: 'TheBlast33',
         times: ['01:37:095', '02:19:947',]
     },
+    {
+        player: 'CaGa-TaCoS',
+        times: ['1:37:050', '2:21:666',]
+    },
 ]
 
 const res = times.map(entry => {
@@ -60,38 +85,16 @@ const res = times.map(entry => {
         sec = sec - 59
     }
 
-
-    const format = (u, v)=> {
-        switch(u) {
-            case 'ms': 
-                if (v < 10) {
-                    return `00${v}`
-                }
-                if (v < 100) {
-                    return `0${v}`
-                }
-                return v
-            case 's': 
-                if (v < 10) {
-                    return `0${v}`
-                }
-                return v
-            case 'm':
-            default:
-                if (v < 10) {
-                    return `0${v}`
-                }
-                return v
-        }
-    }
-
     const t = [
          format('m', min),
          format('s', sec),
          format('ms', ms)
     ]
 
-    return {player: entry.player, total: t.join(':')}
+    return {
+        ...entry,
+        total: t.join(':')
+    }
 })
 .sort((a, b) => Number(a.total.replace(/:/ig, '')) - Number(b.total.replace(/:/ig, '')))
 .map((entry, index, arr) =>{
@@ -101,4 +104,4 @@ const res = times.map(entry => {
     : {...entry, category: 'AM'}
 })
 
-console.log(res);
+console.log(JSON.stringify(res, null, 2))

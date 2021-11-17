@@ -6,7 +6,7 @@ import './player.css'
 
 interface Props extends Driver { }
 
-export const Player = ({ category, name, time }: Props) => {
+export const Player = ({ category, name, total }: Props) => {
     return (
         <div className={`player ${category}`}>
             <Category category={category} />
@@ -14,7 +14,7 @@ export const Player = ({ category, name, time }: Props) => {
                 <div className="player-name-wrapper">
                     <span className="player-name">{name}</span>
                 </div>
-                <span className="player-time">{time}</span>
+                <span className="player-time">{total}</span>
             </div>
         </div>
     )

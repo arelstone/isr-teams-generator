@@ -6,14 +6,26 @@ export default {
 }
 
 export const AMPlayer = () => <Player
-  category="AM"
-  name="ISR_EeekDK"
-  time="05:24:612"
+  {...{
+    name: "daddyfarrell",
+    times: [
+      "01:39:012",
+      "02:21:372"
+    ],
+    total: "04:01:384",
+    category: "AM"
+  }}
 />;
 
 export const PROPlayer = () => <Player
-  category="PRO"
-  name="ISR_bumperelite3"
-  time="04:56:015"
+  {...{
+    name: "CaGa-TaCoS",
+    times: [
+      "1:37:050",
+      "2:21:666"
+    ],
+    total: "03:58:716",
+    category: "PRO"
+  }}
 />;
 

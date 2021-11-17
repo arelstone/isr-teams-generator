@@ -1,7 +1,7 @@
 @import url('../../styles/fonts.css');
 
 .player {
-    width: 200px;
+    width: 250px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,7 +9,7 @@
     font-family: var(--khand);
     padding: var(--spacing-s);
     margin: var(--spacing-m);
-    box-shadow: -5px 5px #000000;
+    box-shadow: -4px 4px rgba(0,0,0,0.5);
 }
 
 .player.PRO {
@@ -32,8 +32,8 @@
 }
 
 .player .player-name {
-    font-size: var(--font-size-l);
-    line-height: var(--line-height-l);
+    font-size: var(--font-size-m);
+    line-height: var(--line-height-m);
     font-weight: var(--font-weight-semi-bold);
 
 }
@@ -41,7 +41,7 @@
 .player .player-time {
     text-transform: uppercase;
     font-size: var(--font-size-s);
-    line-height: var(--line-height-m);
+    line-height: var(--line-height-s);
     margin-left: var(--spacing-xl);
     text-align: right;
 }

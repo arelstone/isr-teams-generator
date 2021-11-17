@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --font-size-m: 16px;
-  --line-height-m: calc(var(--font-size-m) + 4);
+  --font-size-s: 16px;
+  --line-height-s: calc(var(--font-size-s) + 4);
   
   --font-size-m: 20px;
   --line-height-m: calc(var(--font-size-m) + 4);
 
-  --font-size-xl: 26px;
+  --font-size-l: 26px;
+  --line-height-l: calc(var(--font-size-xl) - 4);
+ 
+  --font-size-xl: 34px;
   --line-height-xl: calc(var(--font-size-xl) - 4);
 
 
