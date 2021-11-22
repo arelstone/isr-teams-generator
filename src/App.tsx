@@ -1,10 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { playedrivers } from './drivers'
 import { Driver, DriverCategory } from './types';
 
 import { Team } from './components/Team/Team';
-import { Counter } from './components/Counter/Counter';
 import { shuffle } from './utils/shuffle';
 
 
@@ -58,7 +57,6 @@ function App() {
       <button onClick={() => reset()}>Reset</button>
 
       <div id="teams">
-        {/* <Counter count={players.filter(({ onTeam }) => !onTeam).length / 2} /> */}
         {teams.map(([pro, am], index) => <Team key={index} num={index + 1} am={am} pro={pro} />)}
       </div>
     </div >

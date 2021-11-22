@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap');
 
 :root {
+  --font-size-xs: 10px;
+  --line-height-xs: calc(var(--font-size-x) + 4);
+  
   --font-size-s: 16px;
   --line-height-s: calc(var(--font-size-s) + 4);
   
@@ -15,8 +18,9 @@
 
 
   --khand: 'Khand', sans-serif;
+  --font-weight-light: 300;
   --font-weight-regular: 400;
-  --font-weight-medium: 400;
+  --font-weight-medium: 500;
   --font-weight-semi-bold: 500;
   --font-weight-bold: 600;
   --font-weight-ultra-bold: 700;

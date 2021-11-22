@@ -21,52 +21,56 @@ function format (u, v) {
 
 const times = [
     {
-        player: 'dyreborg24',
-        times: ['01:38:559','02:21:861',]
+        name: 'dyreborg24',
+        times: ['01:38:559','2:20:724',]
     },
     {
-        player: 'HadHnSpeeD85_04',
+        name: 'HadHnSpeeD85_04',
         times:[ '01:36:426','02:19:848',]
     },
     {
-        player: 'mazda917',
+        name: 'mazda917',
         times: ['01:37:278','02:20:154',]
     },
     {
-        player: 'ISR_EeekDK',
+        name: 'ISR_EeekDK',
         times:['01:38:892','02:24:651',]
     },
     {
-        player: 'Zaligrace',
+        name: 'Zaligrace',
         times:['01:37:437','02:21:210']
     },
     {
-        player: 'Dazza456',
+        name: 'Dazza456',
         times: ['01:37:518','02:19:482']
     },
     {
-        player: 'Redflyer710',
+        name: 'Redflyer710',
         times: ['01:41:301','02:26:376']
     },
     {
-        player: 'Erazor_DK',
+        name: 'Erazor_DK',
         times: ['01:39:804','02:21:849']
     },
     {
-        player: 'daddyfarrell',
+        name: 'daddyfarrell',
         times: ['01:39:012','02:21:372',]
     },
     {
-        player: 'whitesnake_91',
+        name: 'whitesnake_91',
         times: ['01:39:555','02:24:372']
     },
     {
-        player: 'TheBlast33',
+        name: 'TheBlast33',
         times: ['01:37:095', '02:19:947',]
     },
     {
-        player: 'CaGa-TaCoS',
+        name: 'CaGa-TaCoS',
         times: ['1:37:050', '2:21:666',]
+    },
+    {
+        name: 'shawnsuresh',
+        times: ['1:37:482', '2:20:340',]
     },
 ]
 

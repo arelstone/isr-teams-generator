@@ -1,8 +1,6 @@
-import { Driver } from "./types";
-
-export const playedrivers: Driver[] = [
+[
   {
-    "name": "HadHnSpeeD85_04",
+    "player": "HadHnSpeeD85_04",
     "times": [
       "01:36:426",
       "02:19:848"
@@ -11,7 +9,7 @@ export const playedrivers: Driver[] = [
     "category": "PRO"
   },
   {
-    "name": "Dazza456",
+    "player": "Dazza456",
     "times": [
       "01:37:518",
       "02:19:482"
@@ -20,7 +18,7 @@ export const playedrivers: Driver[] = [
     "category": "PRO"
   },
   {
-    "name": "TheBlast33",
+    "player": "TheBlast33",
     "times": [
       "01:37:095",
       "02:19:947"
@@ -29,7 +27,7 @@ export const playedrivers: Driver[] = [
     "category": "PRO"
   },
   {
-    "name": "mazda917",
+    "player": "mazda917",
     "times": [
       "01:37:278",
       "02:20:154"
@@ -38,7 +36,7 @@ export const playedrivers: Driver[] = [
     "category": "PRO"
   },
   {
-    "name": "shawnsuresh",
+    "player": "shawnsuresh",
     "times": [
       "1:37:482",
       "2:20:340"
@@ -47,7 +45,7 @@ export const playedrivers: Driver[] = [
     "category": "PRO"
   },
   {
-    "name": "Zaligrace",
+    "player": "Zaligrace",
     "times": [
       "01:37:437",
       "02:21:210"
@@ -56,7 +54,7 @@ export const playedrivers: Driver[] = [
     "category": "PRO"
   },
   {
-    "name": "CaGa-TaCoS",
+    "player": "CaGa-TaCoS",
     "times": [
       "1:37:050",
       "2:21:666"
@@ -65,7 +63,7 @@ export const playedrivers: Driver[] = [
     "category": "PRO"
   },
   {
-    "name": "dyreborg24",
+    "player": "dyreborg24",
     "times": [
       "01:38:559",
       "2:20:724"
@@ -74,7 +72,7 @@ export const playedrivers: Driver[] = [
     "category": "AM"
   },
   {
-    "name": "daddyfarrell",
+    "player": "daddyfarrell",
     "times": [
       "01:39:012",
       "02:21:372"
@@ -83,7 +81,7 @@ export const playedrivers: Driver[] = [
     "category": "AM"
   },
   {
-    "name": "Erazor_DK",
+    "player": "Erazor_DK",
     "times": [
       "01:39:804",
       "02:21:849"
@@ -92,7 +90,7 @@ export const playedrivers: Driver[] = [
     "category": "AM"
   },
   {
-    "name": "ISR_EeekDK",
+    "player": "ISR_EeekDK",
     "times": [
       "01:38:892",
       "02:24:651"
@@ -101,7 +99,7 @@ export const playedrivers: Driver[] = [
     "category": "AM"
   },
   {
-    "name": "whitesnake_91",
+    "player": "whitesnake_91",
     "times": [
       "01:39:555",
       "02:24:372"
@@ -110,7 +108,7 @@ export const playedrivers: Driver[] = [
     "category": "AM"
   },
   {
-    "name": "Redflyer710",
+    "player": "Redflyer710",
     "times": [
       "01:41:301",
       "02:26:376"

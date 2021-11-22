@@ -1,7 +1,7 @@
 @import url('../../styles/fonts.css');
 
 .player {
-    width: 250px;
+    width: 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,15 +33,42 @@
 
 .player .player-name {
     font-size: var(--font-size-m);
-    line-height: var(--line-height-m);
+    line-height: var(--line-height-xs);
     font-weight: var(--font-weight-semi-bold);
-
 }
 
-.player .player-time {
+.player .player-total-time {
+    text-transform: uppercase;
+    font-size: var(--font-size-l);
+    line-height: var(--line-height-l);
+    text-align: right;
+    align-self: flex-end;
+    margin-right: var(--spacing-s);
+    /* border: 1px solid red; */
+}
+.player .player-lap-time {
     text-transform: uppercase;
     font-size: var(--font-size-s);
-    line-height: var(--line-height-s);
-    margin-left: var(--spacing-xl);
-    text-align: right;
+    line-height: 0;
+    font-weight: var(--font-weight-regular);
+    margin-right: var(--spacing-s);
+    
+}
+
+.player .player-lap-wrapper {
+    text-transform: uppercase;
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-xs);
+    /* text-align: center; */
+}
+
+
+.p-start {
+    width: 0; 
+  height: 0; 
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid transparent;
+  
+  border-top: 20px solid #f00;
+  transform: rotate(45deg);
 }
