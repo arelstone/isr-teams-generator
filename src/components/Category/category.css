@@ -19,10 +19,10 @@
 .category.PRO {
     background: var(--pro-category-bg-color);
     border-color: var(--pro-category-color);
-    color: var(--pro-color);
+    color: var(--pro-category-color);
 }
 .category.AM {
     background: var(--am-category-bg-color);
     border-color: var(--am-category-color);
-    color: var(--am-color);
+    color: var(--am-category-color);
 }

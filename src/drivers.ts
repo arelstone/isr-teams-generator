@@ -4,17 +4,17 @@ export const playedrivers: Driver[] = [
   {
     "name": "HadHnSpeeD85_04",
     "times": [
-      "01:36:426",
+      "__01:36:426__",
       "02:19:848"
     ],
-    "total": "03:56:275",
+    "total": "__03:56:275__",
     "category": "PRO"
   },
   {
     "name": "Dazza456",
     "times": [
       "01:37:518",
-      "02:19:482"
+      "__02:19:482__"
     ],
     "total": "03:57:001",
     "category": "PRO"

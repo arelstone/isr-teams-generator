@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+const minby = require('lodash.minby')
 
 function format (u, v) {
     switch(u) {
@@ -22,19 +23,19 @@ function format (u, v) {
 const times = [
     {
         name: 'dyreborg24',
-        times: ['01:38:559','2:20:724',]
+        times: ['01:38:559','2:20:724']
     },
     {
         name: 'HadHnSpeeD85_04',
-        times:[ '01:36:426','02:19:848',]
+        times:[ '01:36:426','02:19:848']
     },
     {
         name: 'mazda917',
-        times: ['01:37:278','02:20:154',]
+        times: ['01:37:278','02:20:154']
     },
     {
         name: 'ISR_EeekDK',
-        times:['01:38:892','02:24:651',]
+        times:['01:38:892','02:24:651']
     },
     {
         name: 'Zaligrace',
@@ -54,7 +55,7 @@ const times = [
     },
     {
         name: 'daddyfarrell',
-        times: ['01:39:012','02:21:372',]
+        times: ['01:39:012','02:21:372']
     },
     {
         name: 'whitesnake_91',
@@ -62,15 +63,19 @@ const times = [
     },
     {
         name: 'TheBlast33',
-        times: ['01:37:095', '02:19:947',]
+        times: ['01:37:095', '02:19:947']
     },
     {
         name: 'CaGa-TaCoS',
-        times: ['1:37:050', '2:21:666',]
+        times: ['1:37:050', '2:21:666']
     },
     {
         name: 'shawnsuresh',
-        times: ['1:37:482', '2:20:340',]
+        times: ['1:37:482', '2:20:340']
+    },
+    {
+        name: 'PranaSpirit153',
+        times: ['1:38:916', '2:22:401']
     },
 ]
 
@@ -82,11 +87,11 @@ const res = times.map(entry => {
 
     if (ms > 999) {
         sec = sec + 1
-        ms = ms - 999
+        ms = ms - 1000
     }
     if (sec > 59) {
         min = min + 1
-        sec = sec - 59
+        sec = sec - 60
     }
 
     const t = [
@@ -100,12 +105,34 @@ const res = times.map(entry => {
         total: t.join(':')
     }
 })
-.sort((a, b) => Number(a.total.replace(/:/ig, '')) - Number(b.total.replace(/:/ig, '')))
+.sort((a, b) => a.total.localeCompare(b.total))
 .map((entry, index, arr) =>{
     const chunk = arr.length / 2
     return index < chunk
     ? {...entry, category: 'PRO'}
     : {...entry, category: 'AM'}
+})
+.map((item, index, arr) => {
+    const fastestZandvoort = minby(arr, 'times.0')
+    const fastestSpa = minby(arr, 'times.1')
+    const [zandvoort, spa] = item.times
+    // const fastestOverall = arr[0].total.replace(/:/g, '')
+    // const current = item.total.replace(/:/g, '')
+    // const diff = (fastestOverall - current).toString().replace('-', '')
+    // const missingChars = current.length- diff.length
+    // const [_, __, sec1, sec2, ...ms] = `${`0`.repeat(missingChars)}${diff}`.split('')
+    // const formatted = `+${sec1}${sec2}:${ms.join('')}`
+    // console.log(formatted);
+
+    return {
+        ...item,
+        total: index === 0 ? `__${item.total}__` : item.total,
+        times: [
+            zandvoort === fastestZandvoort.times[0] ? `__${zandvoort}__` : zandvoort,
+            spa === fastestSpa.times[1] ? `__${spa}__` : spa
+        ],
+        // diff: formatted
+    }
 })
 
 console.log(JSON.stringify(res, null, 2))

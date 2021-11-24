@@ -36,9 +36,15 @@
   --pro-player-bg: #ffffff;
   --pro-player-color: #000000;
   
-  --am-category-bg-color: #E1001B;
+  /* --am-category-bg-color: #E1001B;
   --am-category-color: #ffffff;
   --am-player-bg: #4B4B4B;
+  --am-player-color: #ffffff; */
+
+    
+  --am-category-bg-color: #4B4B4B;
+  --am-category-color: #FFD700;
+  --am-player-bg: #000000;
   --am-player-color: #ffffff;
 
 }
