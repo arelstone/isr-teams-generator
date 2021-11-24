@@ -2,7 +2,7 @@ import './qualification-times.css';
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import { Player } from "../../components/Player/Player"
-import { times } from "../../times"
+import { times } from '../../times'
 import { Driver } from "../../types"
 
 

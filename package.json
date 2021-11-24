@@ -29,7 +29,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "driverTimes": "node scripts/driverTimes > src/times.ts"
+    "driverTimes": "node scripts/driverTimes",
+    "driverTimesToFile": "yarn driverTimes > ./src/times.ts"
   },
   "eslintConfig": {
     "extends": [

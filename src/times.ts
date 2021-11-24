@@ -1,4 +1,3 @@
-
 import { Driver } from "./types";
 
 export const times: Driver[] = [
@@ -10,7 +9,7 @@ export const times: Driver[] = [
     ],
     "total": "__03:56:274__",
     "category": "PRO",
-    "difference": "+00:00:999"
+    "difference": "00:000"
   },
   {
     "name": "Dazza456",
@@ -20,7 +19,7 @@ export const times: Driver[] = [
     ],
     "total": "03:57:000",
     "category": "PRO",
-    "difference": "+00:00:999"
+    "difference": "00:726"
   },
   {
     "name": "TheBlast33",
@@ -30,7 +29,7 @@ export const times: Driver[] = [
     ],
     "total": "03:57:042",
     "category": "PRO",
-    "difference": "+00:00:999"
+    "difference": "00:768"
   },
   {
     "name": "mazda917",
@@ -40,7 +39,7 @@ export const times: Driver[] = [
     ],
     "total": "03:57:432",
     "category": "PRO",
-    "difference": "+00:00:999"
+    "difference": "01:158"
   },
   {
     "name": "shawnsuresh",
@@ -50,7 +49,7 @@ export const times: Driver[] = [
     ],
     "total": "03:57:822",
     "category": "PRO",
-    "difference": "+00:00:999"
+    "difference": "01:548"
   },
   {
     "name": "Zaligrace",
@@ -60,7 +59,7 @@ export const times: Driver[] = [
     ],
     "total": "03:58:647",
     "category": "PRO",
-    "difference": "+00:00:999"
+    "difference": "02:373"
   },
   {
     "name": "CaGa-TaCoS",
@@ -70,7 +69,7 @@ export const times: Driver[] = [
     ],
     "total": "03:58:716",
     "category": "PRO",
-    "difference": "+00:00:999"
+    "difference": "02:442"
   },
   {
     "name": "dyreborg24",
@@ -80,7 +79,7 @@ export const times: Driver[] = [
     ],
     "total": "03:59:283",
     "category": "AM",
-    "difference": "+00:00:999"
+    "difference": "03:009"
   },
   {
     "name": "daddyfarrell",
@@ -90,7 +89,7 @@ export const times: Driver[] = [
     ],
     "total": "04:00:384",
     "category": "AM",
-    "difference": "+00:00:999"
+    "difference": "44:110"
   },
   {
     "name": "PranaSpirit153",
@@ -100,7 +99,7 @@ export const times: Driver[] = [
     ],
     "total": "04:01:317",
     "category": "AM",
-    "difference": "+00:00:999"
+    "difference": "45:043"
   },
   {
     "name": "Erazor_DK",
@@ -110,7 +109,7 @@ export const times: Driver[] = [
     ],
     "total": "04:01:653",
     "category": "AM",
-    "difference": "+00:00:999"
+    "difference": "45:379"
   },
   {
     "name": "ISR_EeekDK",
@@ -120,7 +119,7 @@ export const times: Driver[] = [
     ],
     "total": "04:03:543",
     "category": "AM",
-    "difference": "+00:00:999"
+    "difference": "47:269"
   },
   {
     "name": "whitesnake_91",
@@ -130,7 +129,7 @@ export const times: Driver[] = [
     ],
     "total": "04:03:927",
     "category": "AM",
-    "difference": "+00:00:999"
+    "difference": "47:653"
   },
   {
     "name": "Redflyer710",
@@ -140,7 +139,7 @@ export const times: Driver[] = [
     ],
     "total": "04:07:677",
     "category": "AM",
-    "difference": "+00:00:999"
+    "difference": "51:403"
   }
 ]
 

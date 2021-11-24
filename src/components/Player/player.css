@@ -49,8 +49,9 @@
     line-height: 0;
     font-weight: var(--font-weight-regular);
     margin-right: var(--spacing-s);
-    
 }
+
+.player .player-lap-time.difference { text-align: right;}
 
 .player .player-lap-wrapper {
     font-size: var(--font-size-xs);

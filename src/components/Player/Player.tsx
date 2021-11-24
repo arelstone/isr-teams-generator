@@ -14,7 +14,6 @@ export const Player = ({ category, name, total, times, difference, withDifferenc
 
     const isFastest = (t: string) => t.startsWith('__') && t.endsWith('__') && 'fastest'
     const cleanTime = (t: string) => t.replace(/__/g, '')
-
     return (
         <div className={`player ${category}`}>
             <Category category={category} />
@@ -29,7 +28,7 @@ export const Player = ({ category, name, total, times, difference, withDifferenc
                 </div>
                 <div>
                     <div className={`player-total-time ${isFastest(total)}`}>{cleanTime(total)}</div>
-                    {withDifference && <span className='player-lap-time'>{difference}</span>}
+                    {withDifference && <div className='player-lap-time difference'>{Number(difference?.replace(/:/g, '')) !== 0 ? `+${difference}` : ''}</div>}
                 </div>
             </div>
 

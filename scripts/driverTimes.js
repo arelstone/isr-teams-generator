@@ -1,23 +1,39 @@
 #!/usr/bin/env node
 const minby = require('lodash.minby')
 
-function format (u, v) {
-    switch(u) {
-        case 'ms': 
-            if (v < 10) { return `00${v}` }
-            if (v < 100) { return `0${v}`}
+const UNIT = {
+    MINUTES: 'm',
+    SECONDS: 's',
+    MILISECONDS: 'ms'
+}
+
+function format (unit, value) {
+    switch(unit) {
+        case UNIT.MILISECONDS: 
+            if (value < 10) { return `00${value}` }
+            if (value < 100) { return `0${value}`}
             
-            return v
-        case 's': 
-            if (v < 10) { return `0${v}` }
+            return value
+        case UNIT.SECONDS: 
+            if (value < 10) { return `0${value}` }
         
-            return v
-        case 'm':
+            return value
+        case UNIT.MINUTES:
             default:
-                if (v < 10) { return `0${v}` }
+                if (value < 10) { return `0${value}` }
                 
-                return v
+                return value
     }
+}
+
+const difference = (fastest, current) => {
+    const f = `${fastest}`.replace(/:/g, '')
+    const c = `${current}`.replace(/:/g, '')
+
+    const diff = Number(c) - Number(f)
+    const missingChars = f.length - diff.toString().length
+    const [m1, m2, s1, s2, ...ms] = `0`.repeat(missingChars) + diff
+    return `${s1}${s2}:${ms.join('')}`
 }
 
 const times = [
@@ -95,9 +111,9 @@ const res = times.map(entry => {
     }
 
     const t = [
-         format('m', min),
-         format('s', sec),
-         format('ms', ms)
+         format(UNIT.MINUTES, min),
+         format(UNIT.SECONDS, sec),
+         format(UNIT.MILISECONDS, ms)
     ]
 
     return {
@@ -116,13 +132,6 @@ const res = times.map(entry => {
     const fastestZandvoort = minby(arr, 'times.0')
     const fastestSpa = minby(arr, 'times.1')
     const [zandvoort, spa] = item.times
-    // const fastestOverall = arr[0].total.replace(/:/g, '')
-    // const current = item.total.replace(/:/g, '')
-    // const diff = (fastestOverall - current).toString().replace('-', '')
-    // const missingChars = current.length- diff.length
-    // const [_, __, sec1, sec2, ...ms] = `${`0`.repeat(missingChars)}${diff}`.split('')
-    // const formatted = `+${sec1}${sec2}:${ms.join('')}`
-    // console.log(formatted);
 
     return {
         ...item,
@@ -131,7 +140,7 @@ const res = times.map(entry => {
             zandvoort === fastestZandvoort.times[0] ? `__${zandvoort}__` : zandvoort,
             spa === fastestSpa.times[1] ? `__${spa}__` : spa
         ],
-        difference: '+00:00:999'
+        difference: difference(arr[0].total, item.total)
     }
 })
 
