@@ -131,8 +131,14 @@ const res = times.map(entry => {
             zandvoort === fastestZandvoort.times[0] ? `__${zandvoort}__` : zandvoort,
             spa === fastestSpa.times[1] ? `__${spa}__` : spa
         ],
-        // diff: formatted
+        difference: '+00:00:999'
     }
 })
 
-console.log(JSON.stringify(res, null, 2))
+const out = `
+import { Driver } from "./types";
+
+export const times: Driver[] = ${JSON.stringify(res, null, 2)}
+`
+
+console.log(out)

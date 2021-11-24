@@ -8,21 +8,23 @@ export default {
 export const TeamMembers = () => <Team
   num={1}
   am={{
-    "name": "daddyfarrell",
+    "name": "dyreborg24",
     "times": [
-      "01:39:012",
-      "02:21:372"
+      "01:38:559",
+      "2:20:724"
     ],
-    "total": "04:01:384",
-    "category": "AM"
+    "total": "03:59:283",
+    "category": "AM",
+    "difference": "+00:00:999"
   }}
   pro={{
-    "name": "CaGa-TaCoS",
+    "name": "mazda917",
     "times": [
-      "1:37:050",
-      "2:21:666"
+      "01:37:278",
+      "02:20:154"
     ],
-    "total": "03:58:716",
-    "category": "PRO"
+    "total": "03:57:432",
+    "category": "PRO",
+    "difference": "+00:00:999"
   }}
 />;

@@ -4,9 +4,11 @@ import './player.css'
 
 
 
-interface Props extends Driver { }
+interface Props extends Driver {
+    withDifference?: boolean
+}
 
-export const Player = ({ category, name, total, times }: Props) => {
+export const Player = ({ category, name, total, times, difference, withDifference = false }: Props) => {
     if (!total) return null
     const [zandvoort, spa] = times
 
@@ -27,6 +29,7 @@ export const Player = ({ category, name, total, times }: Props) => {
                 </div>
                 <div>
                     <div className={`player-total-time ${isFastest(total)}`}>{cleanTime(total)}</div>
+                    {withDifference && <span className='player-lap-time'>{difference}</span>}
                 </div>
             </div>
 

@@ -1,3 +1,4 @@
+import { difference } from 'lodash';
 import { Player } from './Player';
 
 export default {
@@ -7,25 +8,27 @@ export default {
 
 export const AMPlayer = () => <Player
   {...{
-    name: "daddyfarrell",
-    times: [
-      "01:39:012",
-      "02:21:372"
+    "name": "dyreborg24",
+    "times": [
+      "01:38:559",
+      "2:20:724"
     ],
-    total: "04:01:384",
-    category: "AM"
+    "total": "03:59:283",
+    "category": "AM",
+    "difference": "+00:00:999"
   }}
 />;
 
 export const PROPlayer = () => <Player
   {...{
-    name: "CaGa-TaCoS",
-    times: [
-      "1:37:050",
-      "2:21:666"
+    "name": "mazda917",
+    "times": [
+      "01:37:278",
+      "02:20:154"
     ],
-    total: "03:58:716",
-    category: "PRO"
+    "total": "03:57:432",
+    "category": "PRO",
+    "difference": "+00:00:999"
   }}
 />;
 

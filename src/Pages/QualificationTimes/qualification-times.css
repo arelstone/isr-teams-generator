@@ -1,0 +1,5 @@
+@import url('../../styles/fonts.css');
+
+h1 {
+    font-family: var(--khand);
+}

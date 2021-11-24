@@ -8,6 +8,7 @@ export type Driver = {
     name: string
     total: string
     times: [Zandvoort, Spa]
+    difference?: string
 }
 
 export type TeamPlayers = {

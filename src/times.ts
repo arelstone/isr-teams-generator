@@ -1,14 +1,16 @@
+
 import { Driver } from "./types";
 
-export const playedrivers: Driver[] = [
+export const times: Driver[] = [
   {
     "name": "HadHnSpeeD85_04",
     "times": [
       "__01:36:426__",
       "02:19:848"
     ],
-    "total": "__03:56:275__",
-    "category": "PRO"
+    "total": "__03:56:274__",
+    "category": "PRO",
+    "difference": "+00:00:999"
   },
   {
     "name": "Dazza456",
@@ -16,8 +18,9 @@ export const playedrivers: Driver[] = [
       "01:37:518",
       "__02:19:482__"
     ],
-    "total": "03:57:001",
-    "category": "PRO"
+    "total": "03:57:000",
+    "category": "PRO",
+    "difference": "+00:00:999"
   },
   {
     "name": "TheBlast33",
@@ -25,8 +28,9 @@ export const playedrivers: Driver[] = [
       "01:37:095",
       "02:19:947"
     ],
-    "total": "03:57:043",
-    "category": "PRO"
+    "total": "03:57:042",
+    "category": "PRO",
+    "difference": "+00:00:999"
   },
   {
     "name": "mazda917",
@@ -35,7 +39,8 @@ export const playedrivers: Driver[] = [
       "02:20:154"
     ],
     "total": "03:57:432",
-    "category": "PRO"
+    "category": "PRO",
+    "difference": "+00:00:999"
   },
   {
     "name": "shawnsuresh",
@@ -44,7 +49,8 @@ export const playedrivers: Driver[] = [
       "2:20:340"
     ],
     "total": "03:57:822",
-    "category": "PRO"
+    "category": "PRO",
+    "difference": "+00:00:999"
   },
   {
     "name": "Zaligrace",
@@ -53,7 +59,8 @@ export const playedrivers: Driver[] = [
       "02:21:210"
     ],
     "total": "03:58:647",
-    "category": "PRO"
+    "category": "PRO",
+    "difference": "+00:00:999"
   },
   {
     "name": "CaGa-TaCoS",
@@ -62,7 +69,8 @@ export const playedrivers: Driver[] = [
       "2:21:666"
     ],
     "total": "03:58:716",
-    "category": "PRO"
+    "category": "PRO",
+    "difference": "+00:00:999"
   },
   {
     "name": "dyreborg24",
@@ -70,8 +78,9 @@ export const playedrivers: Driver[] = [
       "01:38:559",
       "2:20:724"
     ],
-    "total": "03:59:284",
-    "category": "AM"
+    "total": "03:59:283",
+    "category": "AM",
+    "difference": "+00:00:999"
   },
   {
     "name": "daddyfarrell",
@@ -79,8 +88,19 @@ export const playedrivers: Driver[] = [
       "01:39:012",
       "02:21:372"
     ],
-    "total": "04:01:384",
-    "category": "AM"
+    "total": "04:00:384",
+    "category": "AM",
+    "difference": "+00:00:999"
+  },
+  {
+    "name": "PranaSpirit153",
+    "times": [
+      "1:38:916",
+      "2:22:401"
+    ],
+    "total": "04:01:317",
+    "category": "AM",
+    "difference": "+00:00:999"
   },
   {
     "name": "Erazor_DK",
@@ -88,8 +108,9 @@ export const playedrivers: Driver[] = [
       "01:39:804",
       "02:21:849"
     ],
-    "total": "04:02:654",
-    "category": "AM"
+    "total": "04:01:653",
+    "category": "AM",
+    "difference": "+00:00:999"
   },
   {
     "name": "ISR_EeekDK",
@@ -97,8 +118,9 @@ export const playedrivers: Driver[] = [
       "01:38:892",
       "02:24:651"
     ],
-    "total": "04:04:544",
-    "category": "AM"
+    "total": "04:03:543",
+    "category": "AM",
+    "difference": "+00:00:999"
   },
   {
     "name": "whitesnake_91",
@@ -106,8 +128,9 @@ export const playedrivers: Driver[] = [
       "01:39:555",
       "02:24:372"
     ],
-    "total": "04:04:927",
-    "category": "AM"
+    "total": "04:03:927",
+    "category": "AM",
+    "difference": "+00:00:999"
   },
   {
     "name": "Redflyer710",
@@ -115,7 +138,9 @@ export const playedrivers: Driver[] = [
       "01:41:301",
       "02:26:376"
     ],
-    "total": "04:08:677",
-    "category": "AM"
+    "total": "04:07:677",
+    "category": "AM",
+    "difference": "+00:00:999"
   }
 ]
+
